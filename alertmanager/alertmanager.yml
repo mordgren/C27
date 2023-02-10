@@ -1,0 +1,16 @@
+route:
+  receiver: 'mail'
+  repeat_interval: 4h
+  group_by: [ alertname ]
+
+
+receivers:
+  - name: 'mail'
+    email_configs:
+      - smarthost: 'smtp.mail.ru:465'
+        require_tls: false
+        auth_username: 'testmail2024@list.ru'
+        auth_password: "3P2yteegOOK"
+        from: 'testmail2024@list.ru'
+        to: '1artur90@mail.ru'
+    
